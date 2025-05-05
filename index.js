@@ -6,9 +6,10 @@ const telegramBot = require('node-telegram-bot-api');
 const token = '7842171869:AAFrYNCR3F7lznkJpyIY9eJwyHwVByR3zpI';
 const bot = new telegramBot(token, {polling: true});
 const webAppUrl = process.env.WEB_APP_URL;
+const app = express()
 
-app.use(express.json)
-app.use(cors)
+app.use(express.json())
+app.use(cors())
 
 
 bot.on('message', async (msg) => {
