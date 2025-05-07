@@ -13,13 +13,6 @@ app.use(cors())
 
 bot.on('message', async (msg) => {
     const chatId = msg.chat.id;
-    const inline_keyboard = {
-        reply_markup: {
-            keyboard: [
-                [{text: 'Открыть приложение', web_app: {url: webAppUrl + '/form'}}]
-            ]
-        }
-    };
 
     if (msg.text === '/start') {
         await bot.sendMessage(chatId, 'Ниже появится кнопка, заполни форму', {
