@@ -1,11 +1,10 @@
-require('dotenv').config();
 const express = require('express')
 const cors = require('cors')
 
 const telegramBot = require('node-telegram-bot-api');
 const token = '7842171869:AAFrYNCR3F7lznkJpyIY9eJwyHwVByR3zpI';
 const bot = new telegramBot(token, {polling: true});
-const webAppUrl = process.env.WEB_APP_URL;
+const webAppUrl = 'https://animated-narwhal-4619ab.netlify.app';
 const app = express()
 
 app.use(express.json())
